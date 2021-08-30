@@ -4,15 +4,22 @@ def user_choice():
     valid = False
     while not valid:
         
-        response = "file type (interger / text / image): ".lower()
+        response = input("File type (interger / text / image): ").lower()
         
-        if response == "text" or response =="t":
-            return response
+        text_ok = [ "text","t","txt" ]
+        if response in text_ok:
+            return "text"
          
         else:
+            print()
             print("Please choose a valid file type!")
             print()
 
 
 #MAin rotine goes here
-data_type = user_choice
+data_type = user_choice()
+print()
+
+print("you chose", data_type)
+
+print()
