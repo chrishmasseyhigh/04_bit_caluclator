@@ -16,10 +16,10 @@ def user_choice():
             print()
 
 
-#MAin rotine goes here
-data_type = user_choice()
-print()
-
-print("you chose", data_type)
-
-print()
+#Main rotine goes here
+keep_going = ""
+while keep_going == "":
+    data_type = user_choice()
+    print()
+    print("you chose", data_type)
+    print()
