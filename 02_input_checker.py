@@ -1,9 +1,9 @@
 #checks user choice is 'interger', 'text' or 'image'
 def user_choice():
     #list of valid responces
-    text_ok = [ "text","t","txt" ]
+    text_ok = [ "text","t","txt", "TEXT", "T" ]
     interger_ok = ["integer", "int", "#", "number"]
-    image_ok = ["image", "img", "pix", "picture", "pic"]
+    image_ok = ["image", "img", "pix", "picture", "pic", "P"]
 
 
 
