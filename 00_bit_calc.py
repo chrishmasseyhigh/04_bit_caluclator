@@ -62,7 +62,10 @@ statement_generator("Bit calculator for Integers, Text & Images", "-")
 # Loop to alow putiple calculations
 keep_going = ""
 while keep_going == "":
+    
     #ask the user for the file type
     data_type= user_choice()
+    print()
     print("you chose", data_type)
+    print()
 
