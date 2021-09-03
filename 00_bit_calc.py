@@ -1,5 +1,4 @@
-#functions go here
-
+#Functions go here
 
 #Put series of symbols at sart and end of text
 def statement_generator(text, decoration):
@@ -16,7 +15,7 @@ def statement_generator(text, decoration):
 
     return ""
 
-# cheeks user choice is int, text or img
+#Checks user choice is int, text or img
 def user_choice():
     #list of valid responces
     text_ok = [ "text","t","txt" ]
@@ -51,8 +50,32 @@ def user_choice():
             print("Please choose a valid file type!")
             print()
 
+#checks input is a number more than zero
+def num_check(question, low):
+    valid = False
+    while not valid:
+        
+        error = "please enter a integer that is more than (or equal to) {}".format(low)
+        error2= "please enter a integer that does not have decimal part / enter a number".format(low)
+                                                                         
+        try:
+        
+            # Ask user to enter a number
+            response = int(input(question))
+
+            # Checks number is more than zero
+            if response >= low:
+                return response
+
+            # Outputs error if input is invalid
+            else:
+                print(error)
+                print()
+                
+        except ValueError:
+            print(error2)
+
 # maine rotine goes here
-statement_generator("look stars", "*")
 
 #Heading
 statement_generator("Bit calculator for Integers, Text & Images", "-")
@@ -68,4 +91,17 @@ while keep_going == "":
     print()
     print("you chose", data_type)
     print()
+
+    # For integers, ask for integer
+    if data_type=="integer":
+        var_integer = num_check("Enter an integer:", 0)
+
+    # ( must be an integer more than / equal to 0)
+
+    #For images, ask for width and hight
+    # (must be untegers more than/ equal to 1)
+
+    # For text, ask for a string
+
+
 
