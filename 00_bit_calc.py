@@ -107,6 +107,7 @@ while keep_going == "":
     # (must be untegers more than/ equal to 1)
 
     # For text, ask for a string
-
+    else:
+        var_text = input("enter some text: ")
 
 
