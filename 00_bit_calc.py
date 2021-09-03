@@ -97,7 +97,12 @@ while keep_going == "":
         var_integer = num_check("Enter an integer:", 0)
 
     # ( must be an integer more than / equal to 0)
-
+    elif data_type == "image":
+        print()
+        image_width=num_check("Image width? ", 1)
+        print()
+        image_height=num_check("Image hight? ", 1)
+        print()
     #For images, ask for width and hight
     # (must be untegers more than/ equal to 1)
 
