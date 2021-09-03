@@ -108,6 +108,6 @@ while keep_going == "":
 
     # For text, ask for a string
     else:
-        var_text = input("enter some text: ")
-
+        var_text = input("Enter some text: ")
+        print()
 
