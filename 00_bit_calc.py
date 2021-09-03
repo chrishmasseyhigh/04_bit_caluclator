@@ -95,10 +95,10 @@ while keep_going == "":
     # For integers, ask for integer
     if data_type=="integer":
         var_integer = num_check("Enter an integer:", 0)
-
+        print()
     # ( must be an integer more than / equal to 0)
     elif data_type == "image":
-        print()
+        
         image_width=num_check("Image width? ", 1)
         print()
         image_height=num_check("Image hight? ", 1)
