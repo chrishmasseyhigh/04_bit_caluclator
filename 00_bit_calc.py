@@ -75,6 +75,72 @@ def num_check(question, low):
         except ValueError:
             print(error2)
 
+# calculates # of bits for text (# of characters x 8)
+def text_bits():
+
+    print()
+    # ask user for a string...
+    var_text = input("Enter some text: ")
+
+    # calculate # of bits (lenth of a string x 8)
+    var_length = len(var_text)
+    num_bits = 8 * var_length
+
+    # output answer with working
+    print()
+    print("\'{}\' has {} characters ..". format(var_text, var_length))
+    print("# of bits is {} x 8".format(var_length))
+    print("We need {} bits to represent {}".format(num_bits, var_text))
+    print()
+
+    return ""
+
+# Finds # of bits for 24 bit colour
+def image_bits():
+    
+    # Calculate pixels
+    var_height = num_check("Image height? ", 0)
+    print()
+    var_width = num_check("Image width? ", 0)
+    print()
+
+    # Calculate width times hight
+    num_pixels  = var_height*var_width
+
+    # Calculate the total number of bits
+    total_bits = num_pixels * 24
+
+    # Show the calculations
+    print()
+    print("# Number of pixels, {} * {} = {}".format(var_height, var_width, num_pixels))
+    
+    print("# Number of bits, {} x 24 = {}".format(num_pixels, total_bits))
+    print()
+    
+    return ""
+
+# converst decimal to bianary and states how
+# many bits are neeeded to represent the origanal intieger
+def int_bits():
+
+
+    # get integer
+    var_integer = num_check("Please enter an integer: ",0)
+
+
+
+    var_binary = "{0:b}".format(var_integer)
+
+    # calculate # of bits (length of string above)
+    num_bits = len(var_binary)
+
+    # output answer with working
+    print()
+    print("{} in binary is {}".format(var_integer, var_binary))
+    print("# of bits is {}".format(num_bits))
+
+    return ""
+
 # maine rotine goes here
 
 #Heading
