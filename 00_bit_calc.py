@@ -141,12 +141,28 @@ def int_bits():
 
     return ""
 
+# displays instructions / information
+def instructions():
+
+    statement_generator("Instructions / Information", "=")
+    print("Please choose a data type (image/ text / integer)")
+    print()
+    print("This program assumes that images are being represented in 24 bit colour (ie:24 bits per pixel). For , we assume that ascii encoding is being used (8 bits per character).")
+    print()
+    print("Complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
+    print()
+    return
+
 # maine rotine goes here
 
 #Heading
 statement_generator("Bit calculator for Integers, Text & Images", "-")
 
 #Display instructions if user has not used the program before
+first_time = input("Press <enter> to see the instructions or any key to continue ")
+
+if first_time =="":
+    instructions()
 
 # Loop to alow putiple calculations
 keep_going = ""
@@ -160,20 +176,18 @@ while keep_going == "":
 
     # For integers, ask for integer
     if data_type=="integer":
-        var_integer = num_check("Enter an integer:", 0)
-        print()
-    # ( must be an integer more than / equal to 0)
-    elif data_type == "image":
-        
-        image_width=num_check("Image width? ", 1)
-        print()
-        image_height=num_check("Image hight? ", 1)
-        print()
+        int_bits()
+    
+    
     #For images, ask for width and hight
     # (must be untegers more than/ equal to 1)
-
+    elif data_type == "image":
+        image_bits()
+    
     # For text, ask for a string
     else:
-        var_text = input("Enter some text: ")
-        print()
+       text_bits()
 
+    print()
+    keep_going = input ("Press <enter> to continue or any key to quit")
+    print()
